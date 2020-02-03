@@ -15,6 +15,7 @@ public class DependencyInjectionExamplesApplication {
 //		SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
 
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
+		System.out.println("---------- MyController initial example ");
 		MyController myController = (MyController) ctx.getBean("myController");
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
@@ -22,7 +23,6 @@ public class DependencyInjectionExamplesApplication {
 		System.out.println("---------- Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
-
 
 		System.out.println("---------- Setter ");
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
