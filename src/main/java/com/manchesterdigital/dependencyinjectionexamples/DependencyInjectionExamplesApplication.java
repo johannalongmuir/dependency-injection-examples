@@ -15,10 +15,12 @@ public class DependencyInjectionExamplesApplication {
 //		SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
 
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
-		System.out.println("---------- MyController initial example ");
 		MyController myController = (MyController) ctx.getBean("myController");
 		String greeting = myController.sayHello();
+		System.out.println("---------- Primary Bean ");
 		System.out.println(greeting);
+
+
 
 		System.out.println("---------- MyController single line example of above ");
 		System.out.println(((MyController) ctx.getBean("myController")).sayHello());
