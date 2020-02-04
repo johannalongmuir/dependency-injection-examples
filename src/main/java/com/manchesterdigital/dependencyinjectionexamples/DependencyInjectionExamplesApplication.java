@@ -1,9 +1,6 @@
 package com.manchesterdigital.dependencyinjectionexamples;
 
-import com.manchesterdigital.dependencyinjectionexamples.controllers.ConstructorInjectedController;
-import com.manchesterdigital.dependencyinjectionexamples.controllers.MyController;
-import com.manchesterdigital.dependencyinjectionexamples.controllers.PropertyInjectedController;
-import com.manchesterdigital.dependencyinjectionexamples.controllers.SetterInjectedController;
+import com.manchesterdigital.dependencyinjectionexamples.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +12,13 @@ public class DependencyInjectionExamplesApplication {
 //		SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
 
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
+
+		System.out.println("---------- Profiles EN vs ES");
+		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+		System.out.println(i18NController.sayHello());
+
+
+
 		MyController myController = (MyController) ctx.getBean("myController");
 		String greeting = myController.sayHello();
 		System.out.println("---------- Primary Bean ");
