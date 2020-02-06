@@ -14,7 +14,7 @@ public class DependencyInjectionExamplesApplication {
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionExamplesApplication.class, args);
 
 		System.out.println("---------- Profiles EN vs ES");
-		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+		I18nController i18NController = (I18nController) ctx.getBean("i18nController");
 		System.out.println(i18NController.sayHello());
 
 
