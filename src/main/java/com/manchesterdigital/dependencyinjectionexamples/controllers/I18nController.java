@@ -4,9 +4,6 @@ import com.manchesterdigital.dependencyinjectionexamples.services.GreetingServic
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-/**
- * Created by jt on 12/27/19.
- */
 @SuppressWarnings("ALL")
 @Controller
 public class I18nController {
