@@ -1,7 +1,7 @@
 package com.manchesterdigital.dependencyinjectionexamples.config;
 
-import com.manchesterdigital.dependencyinjectionexamples.services.factory.GreetingRepository;
 import com.manchesterdigital.dependencyinjectionexamples.services.GreetingService;
+import com.manchesterdigital.dependencyinjectionexamples.services.factory.GreetingRepository;
 import com.manchesterdigital.dependencyinjectionexamples.services.factory.GreetingServiceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
