@@ -2,6 +2,7 @@ package com.manchesterdigital.dependencyinjectionexamples;
 
 import com.manchesterdigital.dependencyinjectionexamples.controllers.*;
 import com.manchesterdigital.dependencyinjectionexamples.controllers.i18n.I18nController;
+import com.manchesterdigital.dependencyinjectionexamples.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -23,5 +24,10 @@ public class DependencyInjectionExamplesApplication {
 		PetController petController = ctx.getBean("petController", PetController.class);
 		System.out.println("--- The Best Pet is ---");
 		System.out.println(petController.whichPetIsTheBest());
+
+		System.out.println("---Datasource.properties file---");
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUsername());
+		System.out.println(fakeDataSource.getPassword());
 	}
 }
