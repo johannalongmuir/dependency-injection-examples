@@ -3,3 +3,11 @@ manchesterdigital:
     username: JMS Username
     password: JMS Password
     url: JMS url
+
+---
+spring:
+  profiles: de
+
+manchesterdigital:
+  jms:
+    username: JMS de override Username as Using de profile a
