@@ -1,8 +1,8 @@
-package com.manchesterdigital.dependencyinjectionexamples.services;
+package com.manchesterdigital.dependencyinjectionexamples.services.factory;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class GreetingRepositoryImpl implements GreetingRepository {
     @Override
     public String getEnglishGreeting() {

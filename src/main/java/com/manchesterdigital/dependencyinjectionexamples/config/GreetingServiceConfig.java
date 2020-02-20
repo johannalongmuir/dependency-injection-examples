@@ -1,8 +1,8 @@
 package com.manchesterdigital.dependencyinjectionexamples.config;
 
+import com.manchesterdigital.dependencyinjectionexamples.services.factory.GreetingRepository;
 import com.manchesterdigital.dependencyinjectionexamples.services.GreetingService;
-import com.manchesterdigital.dependencyinjectionexamples.services.GreetingRepository;
-import com.manchesterdigital.dependencyinjectionexamples.services.GreetingServiceFactory;
+import com.manchesterdigital.dependencyinjectionexamples.services.factory.GreetingServiceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -19,7 +19,7 @@ public class GreetingServiceConfig {
     @Bean
     @Primary
     @Profile({"default", "en"})
-    GreetingService primaryGreetingService(GreetingServiceFactory greetingServiceFactory){
+    GreetingService primaryEnglishGreetingService(GreetingServiceFactory greetingServiceFactory){
         return greetingServiceFactory.createGreetingService("en");
     }
 
@@ -37,4 +37,3 @@ public class GreetingServiceConfig {
         return greetingServiceFactory.createGreetingService("de");
     }
 }
-

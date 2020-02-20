@@ -1,4 +1,6 @@
-package com.manchesterdigital.dependencyinjectionexamples.services;
+package com.manchesterdigital.dependencyinjectionexamples.services.factory;
+
+import com.manchesterdigital.dependencyinjectionexamples.services.GreetingService;
 
 public class PrimarySpanishGreetingService implements GreetingService {
 

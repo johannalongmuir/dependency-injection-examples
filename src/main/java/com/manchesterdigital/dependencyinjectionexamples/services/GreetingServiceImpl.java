@@ -1,14 +1,14 @@
 package com.manchesterdigital.dependencyinjectionexamples.services;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Primary
 @Service
-public class PrimaryGreetingService implements GreetingService {
+public class GreetingServiceImpl implements GreetingService {
+
+    public static final String ORIGINAL_HELLO = "Hellooooooo! ";
 
     @Override
     public String sayGreeting() {
-        return "Hello World!!! - Primary Greeting";
+        return ORIGINAL_HELLO;
     }
 }

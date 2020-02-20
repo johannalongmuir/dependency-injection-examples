@@ -1,4 +1,4 @@
-package com.manchesterdigital.dependencyinjectionexamples.services;
+package com.manchesterdigital.dependencyinjectionexamples.services.factory;
 
 public interface GreetingRepository {
     String getEnglishGreeting();

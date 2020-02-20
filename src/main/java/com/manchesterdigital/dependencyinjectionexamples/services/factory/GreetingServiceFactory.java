@@ -1,4 +1,6 @@
-package com.manchesterdigital.dependencyinjectionexamples.services;
+package com.manchesterdigital.dependencyinjectionexamples.services.factory;
+
+import com.manchesterdigital.dependencyinjectionexamples.services.GreetingService;
 
 public class GreetingServiceFactory {
 
@@ -11,13 +13,13 @@ public class GreetingServiceFactory {
     public GreetingService createGreetingService(String lang){
         switch (lang){
             case "en":
-                return new PrimaryEnglishGreetingService(greetingRepository);
+                return new PrimaryGreetingService(greetingRepository);
             case "de":
                 return new PrimaryGermanGreetingService(greetingRepository);
             case "es":
                 return new PrimarySpanishGreetingService(greetingRepository);
             default:
-                return new PrimaryEnglishGreetingService(greetingRepository);
+                return new PrimaryGreetingService(greetingRepository);
         }
     }
 }
