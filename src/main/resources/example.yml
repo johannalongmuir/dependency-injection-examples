@@ -1,0 +1,47 @@
+# This is a comment. Ignored as data property.
+# Used to describe data structures
+
+# Property
+name: Johanna
+
+# List, creates an array of names. Easy way to set up a list.
+names: # Can do inline comment anywhere which is ingnored
+  - John
+  - Paul
+  - Ringo
+
+# If need to actually use the # can add inside quotes which will also then pick up anything after that point
+pound_sign: "#"
+
+# More complex. Book Object with properties for author Joe Buck and publisher Random
+book:
+  author: Joe Buck
+  publisher: random
+
+# Booleans are a bit odd
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+#If has ' need to wrap the string
+string_val: "This is it's quote"
+
+# Issues with : have to again use ""
+colon_string: "my courses: one two three"
+
+# Multiple lines. Use the pipe, tells to read in everything. String include the new lines
+include_new_lines: |
+  dfghj fghjk fghj
+  fghj fghj fghj
+  fghj ghj fghj
+
+# Passed in as one long line and new lines would get dropped
+ignore_new_lines: >
+  this is just
+  one long
+  string
+
