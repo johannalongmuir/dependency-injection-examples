@@ -3,6 +3,7 @@ package com.manchesterdigital.dependencyinjectionexamples;
 import com.manchesterdigital.dependencyinjectionexamples.controllers.*;
 import com.manchesterdigital.dependencyinjectionexamples.controllers.i18n.I18nController;
 import com.manchesterdigital.dependencyinjectionexamples.examplebeans.FakeDataSource;
+import com.manchesterdigital.dependencyinjectionexamples.examplebeans.FakeJmsBoker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -29,5 +30,11 @@ public class DependencyInjectionExamplesApplication {
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource.getUsername());
 		System.out.println(fakeDataSource.getPassword());
+
+		System.out.println("---jms.properties file---");
+		FakeJmsBoker fakeJmsBoker = ctx.getBean(FakeJmsBoker.class);
+		System.out.println(fakeJmsBoker.getUsername());
+
+
 	}
 }
