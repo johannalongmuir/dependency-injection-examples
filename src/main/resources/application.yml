@@ -1,0 +1,5 @@
+manchesterdigital:
+  jms:
+    username: JMS Username
+    password: JMS Password
+    url: JMS url
